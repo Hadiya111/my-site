@@ -1,11 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Orca Empire | Исследование королей океана</title>
+    <style>
+        :root {
+            --primary: #00b4d8;
+            --dark: #02010a;
+            --card-bg: #0d1b2a;
+            --text: #e0e1dd;
+            --accent: #90e0ef;
+        }
+
+        * { box-sizing: border-box; scroll-behavior: smooth; }
+
+        body {
+            background-color: var(--dark);
+            color: var(--text);
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Навигация */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(2, 1, 10, 0.9);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 50px;
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            border-bottom: 1px solid var(--primary);
+        }
+
+        nav a {
+            color: var(--text);
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+        }
+
+        nav a:hover { color: var(--primary); }
+
+        /* Шапка с анимацией */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), 
+                        url('https://images.unsplash.com/photo-1551244072-5d12893278ab?auto=format&fit=crop&q=80&w=1600');
+            background-size: cover;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            animation: fadeIn 2s ease-in;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .hero h1 {
+            font-size: 5rem;
+            margin: 0;
+            letter-spacing: 10px;
+            color: var(--primary);
+            text-shadow: 0 0 20px var(--primary);
+        }
+
+        /* Контентные блоки */
+        section { padding: 100px 10% 50px; }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .image-zoom {
+            overflow: hidden;
+            border-radius: 20px;
+            border: 2px solid var(--primary);
+            transition: 0.5s;
+        }
+
+        .image-zoom img {
+            width: 100%;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .image-zoom:hover img { transform: scale(1.1); }
+
+        /* Таблица (то, что любит учитель) */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 40px 0;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #1b263b;
+        }
+
+        th { background: var(--primary); color: var(--dark); text-transform: uppercase; }
+
+        tr:hover { background: rgba(0, 180, 216, 0.1); }
+
+        /* Карточки с анимацией при наведении */
+        .feature-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #1b263b;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-15px);
+            border-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(0, 180, 216, 0.3);
+        }
+
+        .footer {
+            background: #000;
+            padding: 50px;
+            text-align: center;
+            border-top: 1px solid var(--primary);
+        }
+
+        h2 { font-size: 2.5rem; color: var(--primary); margin-bottom: 30px; }
+
+    </style>
 </head>
 <body>
-    
+
+    <nav>
+        <a href="#home">Главная</a>
+        <a href="#about">О косатках</a>
+        <a href="#compare">Сравнение</a>
+        <a href="#facts">Факты</a>
+    </nav>
+
+    <div class="hero" id="home">
+        <h1>ORCA</h1>
+        <p style="font-size: 1.5rem;">Вершина пищевой цепочки океана</p>
+        <a href="#about" style="color: white; margin-top: 20px;">↓ Листай вниз</a>
+    </div>
+
+    <section id="about">
+        <div class="content-grid">
+            <div>
+                <h2>Совершенный охотник</h2>
+                <p>Косатки — единственные настоящие суперхищники океана. Они не имеют естественных врагов. Их интеллект настолько высок, что они разрабатывают стратегии охоты под каждый конкретный вид добычи: от мелкой сельди до гигантских синих китов.</p>
+                <p>У каждой популяции свои традиции. Одни предпочитают рыбу, другие охотятся на пингвинов, третьи — на акул. Этот опыт передается из поколения в поколение.</p>
+            </div>
+            <div class="image-zoom">
+                <img src="https://images.unsplash.com/photo-1568430462989-44163eb1752f?auto=format&fit=crop&q=80&w=800" alt="Orca">
+            </div>
+        </div>
+    </section>
+
+    <section id="compare" style="background: #050a12;">
+        <h2>Сравнение с другими хищниками</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Характеристика</th>
+                        <th>Косатка</th>
+                        <th>Белая акула</th>
+                        <th>Кашалот</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><b>Длина</b></td>
+                        <td>До 10 м</td>
+                        <td>До 6 м</td>
+                        <td>До 20 м</td>
+                    </tr>
+                    <tr>
+                        <td><b>Интеллект</b></td>
+                        <td>Высочайший (социальный)</td>
+                        <td>Средний (инстинкты)</td>
+                        <td>Высокий</td>
+                    </tr>
+                    <tr>
+                        <td><b>Тип охоты</b></td>
+                        <td>Командная стая</td>
+                        <td>Одиночка</td>
+                        <td>Одиночка / Группа</td>
+                    </tr>
+                    <tr>
+                        <td><b>Главная фишка</b></td>
+                        <td>Эхолокация и культура</td>
+                        <td>Острое обоняние</td>
+                        <td>Глубоководное погружение</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="facts">
+        <h2>Уникальные особенности</h2>
+        <div class="feature-box">
+            <div class="card">
+                <h3>🧠 Мозг</h3>
+                <p>Мозг косатки — второй по массе среди всех млекопитающих. У них развиты области, отвечающие за эмоции и социальную близость, которых нет даже у человека.</p>
+            </div>
+            <div class="card">
+                <h3>🗣️ Язык</h3>
+                <p>Они используют щелчки для эхолокации и свист для общения. Каждая семья имеет свой уникальный диалект.</p>
+            </div>
+            <div class="card">
+                <h3>🌍 Распространение</h3>
+                <p>Косатки — вторые после человека млекопитающие по широте распространения на планете.</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="footer">
+        <p>&copy; 2026 Проект про морских обитателей. Все права защищены.</p>
+        <p style="font-size: 0.8rem; color: var(--primary);">Разработано с использованием VS Code & GitHub</p>
+    </div>
+
 </body>
 </html>
