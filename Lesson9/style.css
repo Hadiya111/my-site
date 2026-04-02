@@ -1,0 +1,46 @@
+.container{
+    width: 1000px;
+    margin: auto;
+    border: 5px solid black;
+    display: grid;
+    /* grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-rows: repeat(3, 200px); */
+}
+
+.item{
+    background-color: green;
+    font-size: 35px;
+    color: white;
+    border: 5px solid red;
+    padding: 10px;
+    font-weight: bold;
+
+}
+
+.block1{
+    grid-column: span 2;
+
+}
+
+.block3{
+    grid-row: span 2;
+}
+
+.block4{
+    grid-row: span 2;
+
+}
+
+.block5{
+    grid-column: span 2;
+}
+
+.block6{
+    grid-column: span 2;
+}
+
+.block7{
+    grid-column: span 2;
+}

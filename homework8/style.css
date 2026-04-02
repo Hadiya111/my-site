@@ -1,0 +1,32 @@
+.body{
+    margin: 0;
+}
+
+.menu{
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+    background: #eee;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background: #eee;
+}
+
+input{
+    margin-left: auto;
+}
+
+.menu a{
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.right{
+    display: flex;
+    gap: 10px;
+}

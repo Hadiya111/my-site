@@ -1,0 +1,377 @@
+*{
+ padding: 0;
+ margin: 0;
+}
+.container{
+    width: 1350px;
+    margin: 0 auto;
+}
+
+.header{
+    margin: 50px;
+}
+.info-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.info-header ul{
+    display: flex;
+    gap: 50px;
+}
+ul li{
+    list-style: none;
+    font-weight: 600;
+}
+.icons{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.icons img{
+    width: 40px;
+    height: 40px;
+}
+.info-header button{
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #FF7A00;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+.blue-box{
+    width: 52%;
+    height: 800px;
+    background-color: #2B7AF1;
+    margin-left: auto;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+}
+
+.baner{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 50px auto;
+}
+.baner-text h1{
+    font-size: 40px;
+}
+.baner-text p{
+    font-size: 24px;
+    margin: 20px 0 20px;
+}
+.baner-text button{
+    padding: 15px 30px;
+    border-radius: 25px;
+    border: none;
+    background-color: #FF7A00;
+    font-size: 18px;
+    font-weight: 600;
+}
+.container1{
+    width: 1300px;
+    margin: 0 auto;
+}
+
+.container2{
+    width: 1300px;
+    margin: 0 auto;
+}
+.carts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart{
+    width: 305px;
+    height: 231px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.cart img{
+    width: 80px;
+    height: 80px;
+}
+
+/* сетка 2 колонки */
+.ap-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 100px;
+  gap:30px;
+}
+
+/* базовые карточки */
+.ap-card{
+  background:white;
+  border-radius:10px;
+  overflow:hidden;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* большие карточки */
+.ap-card-large img{
+  height:220px;
+  object-fit:cover;
+}
+
+/* маленькая карточка */
+.ap-card-small img{
+  height:140px; /* меньше по высоте */
+  object-fit:cover;
+}
+
+/* контент карточек */
+.ap-content{
+  padding:15px;
+}
+
+.ap-btn{
+  background:#ff8c32;
+  border:none;
+  padding:8px 18px;
+  border-radius:20px;
+  color:white;
+  cursor:pointer;
+}
+
+.carh{
+    margin-top: 20px;
+    margin-bottom: 60px;
+}
+
+.carh7{
+    margin-top: 25px;
+}
+
+.about-section{
+    margin-top: 80px;
+    clear: both;
+}
+
+.about{
+    margin-top: 80px;
+}
+
+
+
+/* 0---------------------------------------------------------------0 */
+
+.review{
+    padding: 50px 0;
+    margin: 100px auto;
+    background-color: #2B7AF1;
+}
+.review-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.review-top h2{
+    color: white;
+    font-size: 36px;
+}
+.revcarts{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    margin-top: -60px;
+}
+.rvcart{
+    padding: 30px;
+    background-color: white;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.cart-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.cart-top>span{
+    color: #2B7AF1;
+    font-size: 24px;
+    font-weight: bold;
+}
+.vr-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.vr-bottom span{
+    color: #2B7AF1;
+    font-size: 18px;
+}
+.rvcart>p{
+    line-height: 30px;
+}
+.rvicon{
+    margin: 40px auto;
+    display: flex;
+    justify-content: center;
+}
+
+.starki{
+    position: absolute;
+    display: flex;
+    align-items: center;
+    width: 100px;
+    left: -40px;
+}
+
+.right{
+    position: absolute;
+    right: -40px;
+}
+
+
+/* 0------------------------------------------------------0 */
+.anketa{
+ background: white;
+  padding: 10px 25px;
+  border-radius: 15px;
+  width: 280px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  transform: translateY(-40px);
+}
+
+.anketa h3 {
+     color: #2d6cdf;
+ }
+
+.anketa input,
+.anketa textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.anketa textarea { 
+    height: 80px; resize: none;
+ }
+
+.btn{
+  margin-top: 15px;
+  width: 100%;
+  padding: 10px;
+  background: orange;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+.contact-text {
+  max-width: 400px;
+  color: #333;
+}
+
+.contact-text h4 {
+     margin-top: 15px; color: #2d6cdf;
+ }
+
+ .anketa{
+    padding: 30px 20px;
+    background-color: white;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-shadow: 0 2px 4px;
+    border-radius: 10px;
+    z-index: 99;
+}
+.anketa input,textarea{
+    padding: 10px;
+    font-size: 20px;
+}
+.anketa h3{
+    text-align: center;
+    color: #2B7AF1;
+    font-size: 30px;
+}
+textarea{
+    height: 60px;
+}
+.btn{
+    text-align: center;
+}
+.last-com{
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    gap: 50px;
+}
+.a-texts{
+    width: 700px;
+}
+.a-texts p{
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+.a-texts span{
+    color: #2B7AF1;
+    font-size: 24px;
+}
+/* ----------------------------- */
+footer{
+    width: 100%;
+    height: 600px;
+    background-image: url(./images/footer.png);
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: end;
+    margin-top: -100px;
+}
+.footer-info{
+    z-index: 99;
+    margin: 0 auto;
+}
+.ftop{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+}
+.fbottom{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 200px;
+    margin-bottom: 30px;
+}
+.fbottom p{
+    color: white;
+}
+footer a{
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+.fbtn{
+    background-color: #2B7AF1;
+    padding: 10px 20px;
+    font-size: 24px;
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
